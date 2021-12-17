@@ -1,0 +1,52 @@
+# Appoinement application
+
+## Setup
+
+The first thing to do is to clone the repository:
+
+```sh
+$ git clone "url" or download it  
+$ cd backend
+```
+
+Create a virtual environment to install dependencies in and activate it:
+
+```sh
+$ python3 -m env venv
+$ source env/bin/activate
+```
+
+Then install the dependencies:
+
+```sh
+(env)$ pip install -r requirements.txt
+```
+
+Note the `(env)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment set up by `venv`.
+
+Note that in requirement.txt there is a packages that i clone from my github repository if. make safe if u run :
+-e git://github.com/TheGhostDevlopper/osm-jet@master#egg=osm-jet
+```sh
+(env)$ pip freeze > requirements.txt
+```
+
+to not override it .
+
+Once `pip` has finished downloading the dependencies:
+
+```sh
+(env)$ python manage.py makesmigration
+(env)$ python manage.py migrate
+(env)$ python manage.py runserver
+```
+
+add new admin 
+```sh
+(env)$ python manage.py createsuperuser
+```
+
+And navigate to `http://127.0.0.1:8000/admin/`.
+test admin : macbook pass : 123
+
+Take note that there is db.sqlite3 in the project .

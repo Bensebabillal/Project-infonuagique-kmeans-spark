@@ -1,0 +1,12 @@
+FROM node:10.24.1
+COPY . /app
+WORKDIR /app
+EXPOSE 8000
+
+# RUN npm install -g npm
+RUN node -v
+RUN npm -v
+# RUN rm -r node_modules
+# RUN npm install -g @vue/cli @vue/cli-service @vue/cli-plugin-babel @vue/cli-plugin-eslint @vue/cli-plugin-pwa vue-template-compiler vue-cli-plugin-i18n ajv chart.js webpack
+
+RUN npm install
