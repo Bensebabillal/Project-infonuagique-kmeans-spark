@@ -1,11 +1,11 @@
-# Docker Django Vue Postgres Template ✌️ 🐍
+# Project-infonuagique-kmeans-spark with docker compose ✌️ 🐍
 
 This template is a minimal example for an application using VueJs and Django (RestFramework). Django is pre-configured in this repository to use a Postgres database.
 
 It's setup to have a clear separation: use Vue, Yarn, and Webpack to handle all frontend logic and asset bundling,
 and use Django and RestFramework to manage a Data Models, Web API, and serve static files.
 
-While it's possible to add endpoints to serve django-rendered html responses, the intention is to use Django primarily for the backend, and have view rendering and routing and handled by Vue + Vue Router as a Single Page Application (SPA). You can delete the Vue container information in docker-compose.yml file, and simply have Django not serve the vue file if you'd like to have Django serve views or another implementation (but at that point, why would you choose this repo?)
+While it's possible to add endpoints to serve django-rendered html responses, the intention is to use Django primarily for the backend, and have view rendering and routing and handled by Vue + Vue Router as a Single Page Application (SPA). 
 
 Out of the box, Django will serve the application entry point (`index.html` + bundled assets) at `/` ,
 data at `/api/`, and static files at `/static/`. Django admin panel is also available at `/admin/` and can be extended as needed.
@@ -20,16 +20,6 @@ There are currently two branches. `master` is a template that includes a user re
 
 The `basic-no-users-no-black-dashboard` branch has no user authentication system built-in, no CORS configuration, and no black dashboard theme. It is just a very basic barebones start.
 
-If this setup is not what you are looking for, you might want look at other similar projects:
-
-* [ariera/django-vue-template](https://github.com/ariera/django-vue-template)
-* [vchaptsev/cookiecutter-django-vue](https://github.com/vchaptsev/cookiecutter-django-vue)
-
-Prefer Flask? Checkout [gtalarico/flask-vuejs-template](https://github.com/gtalarico/flask-vuejs-template)
-
-### Demo
-(This is a live demo of the original repo without Docker and Postgres. Todo: fix that)
-[Live Demo](https://django-vue-template-demo.herokuapp.com/)
 
 ### Includes
 
@@ -73,8 +63,8 @@ Docker should install everything else in their containers.
 ## Setup Template
 
 ```
-$ git clone https://github.com/iprogramstuff/docker-django-vue-postgres-template
-$ cd docker-django-vue-postgres-template
+$ gh repo clone Bensebabillal/Project-infonuagique-kmeans-spark
+$ cd Project-infonuagique-kmeans-spark-master
 ```
 
 Setup
