@@ -46,10 +46,9 @@ import {getAPI} from "./axios";
 
 // fontawesome
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faAppleAlt} from '@fortawesome/free-solid-svg-icons'
-import {faApple} from '@fortawesome/free-brands-svg-icons'
+import {faApple, fab} from '@fortawesome/free-brands-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {fab} from '@fortawesome/free-brands-svg-icons'
+// import GmapVue from 'gmap-vue'
 
 library.add(faApple, fab)
 
@@ -69,6 +68,7 @@ Vue.use(PerfectScrollbar);
 
 
 Vue.use(VueHammer)
+
 
 
 // Feather font icon

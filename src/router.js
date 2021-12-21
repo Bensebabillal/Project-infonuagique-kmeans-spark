@@ -67,16 +67,16 @@ const router = new Router({
                     }
                 },
                 {
-                    path: '/Nutrition',
-                    name: 'Nutrition Program',
-                    component: () => import('./views/apps/nutrition/NutritionProgram.vue'),
+                    path: '/Statistique',
+                    name: 'Statistique',
+                    component: () => import('./views/apps/statistique/Statistique.vue'),
                     meta: {
                         requiresAuth: true,
                         breadcrumb: [
                             {title: 'Home', url: '/'},
-                            {title: 'Your Nutrition Program', active: true}
+                            {title: 'Statistique', active: true}
                         ],
-                        pageTitle: 'Nutrition Program',
+                        pageTitle: 'Statistique',
                         rule: 'editor',
                         no_scroll: true
                     }

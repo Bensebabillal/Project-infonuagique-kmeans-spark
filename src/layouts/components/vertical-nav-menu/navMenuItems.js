@@ -34,9 +34,9 @@ export default [
         url: '/Statistique',
         slug: 'Statistique',
         name: 'Statistique',
-        featherIcon: false,
-        icon: 'local_dining',
-        i18n: 'Profile'
+        // featherIcon: false,
+        icon: 'ActivityIcon',
+        i18n: 'Statistique'
     },
     // {
     //     url: '/apps/news',

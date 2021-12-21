@@ -1,91 +1,63 @@
 <template>
   <div id="dashboard-analytics">
+    <div class="vx-row">
 
+      <div class="vx-col mr-auto ml-auto mt-10 w-full  mb-base">
+        <vx-card class="p-2 mt-5" style="border-radius: 15px">
+          <iframe style="width:100%;height:200vh;"
+                  src="http://127.0.0.1:5500/test.html" title="description"></iframe>
+        </vx-card>
+      </div>
 
-    <div class="vx-col w-full mb-base">
-      <iframe style="width:100%;height:200vh;"
-              src="http://127.0.0.1:5500/" title="description"></iframe>
 
     </div>
+
+
   </div>
 </template>
 <script>
-import VueApexCharts from "vue-apexcharts";
-import {VclFacebook} from "vue-content-loading";
-import {getAPI} from "@/axios";
+import VueApexCharts from 'vue-apexcharts'
+import {VclFacebook} from 'vue-content-loading'
+import {getAPI} from '@/axios'
 
 export default {
+
   data() {
     return {
       loaded: false,
-      themeColors: ["#28C76F", "#28C76F", "#EA5455", "#FF9F43", "#1E1E1E"],
+      themeColors: ['#28C76F', '#28C76F', '#EA5455', '#FF9F43', '#1E1E1E'],
       training_type: [],
       radarChart: {
-        series: [
-          {
-            name: "Series 1",
-            data: [3, 4, 4, 5, 5, 4, 4],
-          },
-        ],
+        series: [{
+          name: 'Series 1',
+          data: [3, 4, 4, 5, 5, 4, 4],
+        }],
         chartOptions: {
-          colors: ["#28C76F", "#28C76F", "#EA5455", "#FF9F43", "#1E1E1E"],
-          labels: [
-            "Conditioning",
-            "Speed",
-            "Endurance",
-            "Soccer Basics",
-            "Technique",
-            "Tactical",
-            "Mental",
-          ],
-        },
+          colors: ['#28C76F', '#28C76F', '#EA5455', '#FF9F43', '#1E1E1E'],
+          labels: ['Conditioning', 'Speed', 'Endurance', 'Soccer Basics', 'Technique', 'Tactical', 'Mental'],
+
+        }
       },
-      card_bg_img_1: require("@/assets/images/pages/card-bg-image-demo-1.jpg"),
-      card_bg_img_2: require("@/assets/images/pages/card-bg-image-demo-2.jpg"),
-    };
+      card_bg_img_1: require('@/assets/images/pages/card-bg-image-demo-1.jpg'),
+      card_bg_img_2: require('@/assets/images/pages/card-bg-image-demo-2.jpg')
+    }
   },
-  components: {
-    VueApexCharts,
-    // VueContentLoading,
-    VclFacebook,
-  },
+  components: {},
   computed: {
     activeUserInfo() {
-      return this.$store.state.AppActiveUser;
+      return this.$store.state.AppActiveUser
     },
   },
-  methods: {
-    getProgram() {
-      this.loaded = true;
-
-      getAPI
-          .get("player/api/v1/program/training-type/")
-          .then((response) => {
-            // commit('offerPosts', response.data)
-            setTimeout(() => {
-              console.log("World!ddd");
-            }, 2000);
-            // console.log(response
-            if (response) {
-              this.training_type.push(...response.data["results"]);
-              console.log(this.training_type);
-            }
-            this.loaded = false;
-            // console.log(response.data);
-          })
-          .catch((error) => {
-            // console.log(error);
-            this.loaded = false;
-          });
-    },
-  },
+  methods: {},
   // created() {
   //     this.getProgram()
   // },
   mounted() {
-    this.getProgram();
+
+
   },
-};
+
+}
 </script>
 
 <style lang="scss">
@@ -106,9 +78,8 @@ export default {
     }
   }
 
-  @media (max-width: 576px) {
-    .decore-left,
-    .decore-right {
+  @media(max-width: 576px) {
+    .decore-left, .decore-right {
       width: 140px;
     }
   }
